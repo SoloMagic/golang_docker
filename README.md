@@ -1,12 +1,10 @@
-# golang_docker
-
-1,Ubuntu Trusty 14.04 (LTS) 安装docker
+#Ubuntu Trusty 14.04 (LTS) 安装docker
 
   https://github.com/yeasy/docker_practice/blob/master/install/ubuntu.md
 
-2,sudo docker pull ubuntu:14.04
+  sudo docker pull ubuntu:14.04
 
-3,创建ubuntu-golang镜像 /home/ubuntu/Dockerfile
+#创建ubuntu-golang镜像 /home/ubuntu/Dockerfile
   
   FROM ubuntu:14.04
 
@@ -16,7 +14,7 @@
   
   sudo docker build -t="test/ubuntu" .
 
-4,创建golang镜像 /home/golang/Dockerfile
+#创建golang镜像 /home/golang/Dockerfile
 
   FROM test/ubuntu
 
@@ -45,7 +43,7 @@
   sudo docker build -t="test/golang" .
 
 
-5,创建golang项目 /home/Go/src
+#创建golang项目 /home/Go/src
 
   以及在src下创建Dockerfile文件
   
@@ -59,7 +57,7 @@
   
   sudo docker build -t="testapp" .
 
-6,运行容器
+#运行容器
 
   sudo docker run -it --rm --name test testapp
 
